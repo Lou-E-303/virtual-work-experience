@@ -2,7 +2,7 @@
 
 Engineering challenges for a Virtual Work Experience week first held in June of 2022 for Year 10 students. The theme of the challenge set was 'applying promotions to baskets of products'. The students were encouraged to complete the tasks in JavaScript (as all the supporting material we provided was in JavaScript), but were allowed to use other languages if they wanted to. Around half of them decided to write in Python. One student wrote theirs in Clojure, and the rest were written in JavaScript.
 
-I probably shouldn't make the full document public, but in short the tasks we gave the young people were as follows:
+There was a full document describing the tasks in more detail, but in short the tasks we gave to the students were as follows:
 
 ## Task 1:
 
