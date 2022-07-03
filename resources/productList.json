@@ -1,0 +1,30 @@
+{ 
+    "products":
+    [
+        {
+            "gtin": 5057373267184,
+            "name": "Tesco Finest Honey Roast Ham 125G",
+            "price": 2.85
+        },
+        {
+            "gtin": 5067373267184,
+            "name": "Weetabix 48Pk",
+            "price": 5
+        },
+        {
+            "gtin": 5057376267184,
+            "name": "Nescafe Gold Blend Coffee 200G",
+            "price": 6
+        },
+        {
+            "gtin": 5057373267187,
+            "name": "Dairylea Dunkers Jumbo Tubes Cheese Snacks 6 Pack 246G",
+            "price": 3.3
+        },
+        {
+            "gtin": 5127373267184,
+            "name": "Ginsters Large Cornish Pasty 227G",
+            "price": 1.5
+        }
+    ]
+}
