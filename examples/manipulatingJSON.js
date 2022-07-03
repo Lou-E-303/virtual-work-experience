@@ -8,7 +8,7 @@ const productList = JSON.parse(fs.readFileSync('../EngineeringChallenge/productL
 
 // Print our JS object to the console to prove that we've got it!
 
-// console.log(productList);
+console.log(productList);
 
 // Now we can manipulate our object
 // For example if we just wanted just the price of the first product...
