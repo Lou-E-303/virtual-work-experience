@@ -16,6 +16,8 @@ An array representing a basket of GTINs was provided, with no prices associated 
 
 This time, the array contained both valid and invalid data. The valid data could be either a product name string or GTIN. The invalid data included valid GTINs not present in the accompanying JSON, an empty string, `undefined` and an invalid product name string.
 
+e.g. `[5067373267184, "",  "Ginsters Large Cornish Pasty 227G", "Loose Carrot 500G", 5157373267184, 5067373267123, "Honey Roast Ham 130G", 5057373267984, 505737326798, ];`
+
 ## Task 2:
 
 Task Description: _We have now decided to add Promotions to some of the items! The price list now contains a start and end date of promotion for some of the products. Can you determine which products are currently on Promotion and adjust the pricing accordingly?_
