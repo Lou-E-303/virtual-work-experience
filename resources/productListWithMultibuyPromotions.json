@@ -3,7 +3,7 @@
     [
         {
             "gtin": 5057373267184,
-            "name": "Tesco Finest Honey Roast Ham 125G",
+            "name": "Lucky Aide Finest Honey Roast Ham 125G",
             "price": 2.85,
             "discount": 0.85,
             "discountType": "ClubcardPrice",
@@ -46,7 +46,7 @@
         },
         {
             "gtin": 5157373267184,
-            "name": "Tesco Drained Tuna Steak In Spring Water 110G",
+            "name": "Lucky Aide Drained Tuna Steak In Spring Water 110G",
             "price": 1.25,
             "discount": 0.25,
             "discountType": "Any3For3",
