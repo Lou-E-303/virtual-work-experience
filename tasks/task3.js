@@ -5,17 +5,15 @@ const basket = [5057373267984, 5157373267184, 5057373267184, 5057376267184, 5157
 console.log("\nThe total price of the basket is: £" + getTotalPriceOfBasket(basket) + "\n");
 
 function getTotalPriceOfBasket(basket) {
-    let totalPrice = applyAllDiscounts(basket);
+    let totalPrice = applyAllDiscounts();
     return totalPrice.toFixed(2);
 }
 
 function applyAllDiscounts() {
-    let basketCopy = [...basket];
     let price = 0;
-
-    price += applyRegularDiscounts(basketCopy)
-    + applyBogofDiscounts(basketCopy)
-    + applyAnyXForYDiscounts(basketCopy);
+    price += applyRegularDiscounts(basket)
+    + applyBogofDiscounts(basket)
+    + applyAnyXForYDiscounts(basket);
 
     return price;
 }
@@ -28,7 +26,6 @@ function applyRegularDiscounts(basket) {
 
         if (product?.discountType === 'LoyaltyPrice' && isPromotionActive(product)) {
             price += product.price - product.discount;
-            basket.splice(i, 1);
         }
     }
     return price;
@@ -49,9 +46,7 @@ function applyBogofDiscounts(basket) {
 
             if (promotionCount % 2 !== 0) { // I did think this was quite clever though! Literally, buy one get one free
                 price += product.price;
-            }
-
-            basket.splice(i, 1);
+            }            
         }
     }
     return price;
@@ -74,8 +69,6 @@ function applyAnyXForYDiscounts(basket) {
             } else {
                 price += product.price;
             }
-
-            basket.splice(i, 1);
         }
 
         if (product?.discountType === 'Any4For3' && isPromotionActive(product)) {
@@ -87,8 +80,6 @@ function applyAnyXForYDiscounts(basket) {
             } else {
                 price += product.price;
             }
-
-            basket.splice(i, 1);
         }
     }
     return price;
