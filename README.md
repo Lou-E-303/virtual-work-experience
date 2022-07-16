@@ -26,7 +26,7 @@ Task Description: _We have now decided to add Promotions to some of the items! T
 
 ## Task 3:
 
-Task Description: _Some of the items in the basket are now eligible for multibuy savings! Some are ‘buy one, get one free’, others are ‘3 for 2’. Can you write some code to calculate which ones are eligible and adjust the pricing accordingly? For the products below the discount should only be applied if the promotion conditions are met. For example, Any3For3 requires 3 products to be purchased. What would happen if you purchased 4 Tuna cans?_
+Task Description: _Some of the items in the basket are now eligible for multibuy savings! Some are ‘buy one, get one free’, others are ‘3 for 2’. Can you write some code to calculate which ones are eligible and adjust the pricing accordingly? The discount should only be applied to the promotions for which the conditions are met. For example, Any3For3 requires 3 products to be purchased. What would happen if you purchased 4 Tuna cans?_
 
 ## Task 4 (Bonus):
 
