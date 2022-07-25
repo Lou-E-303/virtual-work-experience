@@ -5,11 +5,11 @@ const basket = [5057373267984, 5157373267184, 5057373267184, 5057376267184, 5157
 console.log("\nThe total price of the basket is: £" + getTotalPriceOfBasket(basket) + "\n");
 
 function getTotalPriceOfBasket(basket) {
-    let totalPrice = applyAllDiscounts();
+    let totalPrice = applyAllDiscounts(basket);
     return totalPrice.toFixed(2);
 }
 
-function applyAllDiscounts() {
+function applyAllDiscounts(basket) {
     let price = 0;
     price += applyRegularDiscounts(basket)
     + applyBogofDiscounts(basket)
@@ -31,8 +31,9 @@ function applyRegularDiscounts(basket) {
     return price;
 }
 
-// This relies on there only being one product type with a Bogof discount
-// TODO I'll come back and implement a more general solution in future
+// NOTE: this relies on there only being one product type with a Bogof discount
+// A more general solution would be better
+
 function applyBogofDiscounts(basket) {
     let price = 0;
     let promotionCount = 0;
