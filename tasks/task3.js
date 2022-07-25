@@ -53,31 +53,18 @@ function applyBogofDiscounts(basket) {
     return price;
 }
 
-function applyAnyXForYDiscounts(basket) {
+function applyAnyXForYDiscounts(basket, numberOfProducts, costForBundle) {
     let price = 0;
     let promotionCount = 0;
 
     for (let i = 0; i < basket.length; i++) {
         const product = productList.products[i];
 
-        // TODO these two can be generalised into one function
-        if (product?.discountType === 'Any3For3' && isPromotionActive(product)) {
-            
+        if (product.discountType === `Any{numberOfProducts}For{costForBundle}` && isPromotionActive(product)) {
             promotionCount++;
 
-            if (promotionCount % 3 !== 0) {
-                price += 3 - (product.price * 2);
-            } else {
-                price += product.price;
-            }
-        }
-
-        if (product?.discountType === 'Any4For3' && isPromotionActive(product)) {
-            
-            promotionCount++;
-
-            if (promotionCount % 4 !== 0) {
-                price += 3 - (product.price * 3);
+            if (promotionCount % numberOfProducts !== 0) {
+                price += costForBundle - (product.price * (numberOfProducts - 1));
             } else {
                 price += product.price;
             }
