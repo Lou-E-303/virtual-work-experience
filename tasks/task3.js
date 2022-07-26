@@ -53,15 +53,19 @@ function applyBogofDiscounts(basket) {
     return price;
 }
 
-function applyAnyXForYDiscounts(basket, numberOfProducts, costForBundle) {
+function applyAnyXForYDiscounts(basket) {
     let price = 0;
     let promotionCount = 0;
 
     for (let i = 0; i < basket.length; i++) {
         const product = productList.products[i];
 
-        if (product?.discountType === `Any${numberOfProducts}For${costForBundle}` && isPromotionActive(product)) {
+        if (product?.discountType.indexOf('Any') !== -1 && isPromotionActive(product)) {
             promotionCount++;
+            const discountType = product.discountType.split('');
+
+            const numberOfProducts = discountType.slice(3, 4).pop();
+            const costForBundle = discountType.slice(-1).pop();
 
             if (promotionCount % numberOfProducts !== 0) {
                 price += costForBundle - (product.price * (numberOfProducts - 1));
@@ -74,9 +78,13 @@ function applyAnyXForYDiscounts(basket, numberOfProducts, costForBundle) {
 }
 
 function isPromotionActive(product) {
-    const now = new Date();
-    const promotionStartDate = new Date(product.startTime);
-    const promotionEndDate = new Date(product.endTime);
+    if (product) {
+        const now = new Date();
+        const promotionStartDate = new Date(product.startTime);
+        const promotionEndDate = new Date(product.endTime);
 
-    return (promotionStartDate < now && now < promotionEndDate);
+        return (promotionStartDate < now && now < promotionEndDate);
+    } else {
+        return false;
+    }
 }
