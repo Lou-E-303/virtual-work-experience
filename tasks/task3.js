@@ -60,7 +60,7 @@ function applyAnyXForYDiscounts(basket, numberOfProducts, costForBundle) {
     for (let i = 0; i < basket.length; i++) {
         const product = productList.products[i];
 
-        if (product?.discountType === `Any{numberOfProducts}For{costForBundle}` && isPromotionActive(product)) {
+        if (product?.discountType === `Any${numberOfProducts}For${costForBundle}` && isPromotionActive(product)) {
             promotionCount++;
 
             if (promotionCount % numberOfProducts !== 0) {
