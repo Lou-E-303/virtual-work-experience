@@ -8,7 +8,7 @@ There was a full document describing the tasks in more detail, but in short the 
 
 ## Task 1:
 
-Task Description: _Given a basket products which have no prices, and a separate list of prices for each product, can you determine the total price of the basket?_
+Task Description: _Given a basket of products which have no prices, and a separate list of prices for each product, can you determine the total price of the basket?_
 
 ### Task 1a:
 
